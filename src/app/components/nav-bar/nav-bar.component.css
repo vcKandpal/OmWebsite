@@ -1,0 +1,25 @@
+.navbar .nav-link {
+  font-size: 14px;
+  text-transform: uppercase;
+  padding-left: 1rem !important;
+  padding-right: 1rem !important;
+}
+
+.navbar .navbar-item.active {
+  border-left: #444 3px solid;
+}
+
+.logo {
+  border-radius: 2px;
+  border: white 1px solid;
+}
+
+.title {
+  margin-left: 7px;
+}
+
+@media screen and (max-width: 600px) {
+  .title {
+    display: none;
+  }
+}

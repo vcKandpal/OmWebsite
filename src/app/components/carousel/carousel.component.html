@@ -1,0 +1,106 @@
+<section id="showcase">
+    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+            <li *ngFor="let navBar of navBars ; let i = index" data-target="#myCarousel" data-slide-to="i" [class]="i == 0 ? 'active' : ''"></li>
+
+        </ol>
+        <div class="carousel-inner">
+            <div *ngFor="let img of carouselImgUrl ; let i = index" [class]="i == 0 ? 'active carousel-item' : 'carousel-item'" [ngStyle]="{'background': 'url(' + img + ')', 'background-size': 'cover'}">
+                <div class="container">
+                    <div class="carousel-caption d-none d-sm-block text-right mb-5">
+                        <h1 class="display-3">Heading One</h1>
+                        <app-todays-thought [index]=i></app-todays-thought>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <a href="#myCarousel" data-slide="prev" class="carousel-control-prev">
+            <span class="carousel-control-prev-icon"></span>
+        </a>
+        <a href="#myCarousel" data-slide="next" class="carousel-control-next">
+            <span class="carousel-control-next-icon"></span>
+        </a>
+    </div>
+</section>
+
+<!-- 
+<section id="showcase">
+    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+            <li class="active" data-target="#myCarousel" data-slide-to="0"></li>
+            <li data-target="#myCarousel" data-slide-to="1"></li>
+            <li data-target="#myCarousel" data-slide-to="2"></li>
+            <li data-target="#myCarousel" data-slide-to="3"></li>
+            <li data-target="#myCarousel" data-slide-to="4"></li>
+        </ol>
+        <div class="carousel-inner">
+            <div class="carousel-item carousel-image-1 active">
+                <div class="container">
+                    <div class="carousel-caption d-none d-sm-block text-right mb-5">
+                        <h1 class="display-3">Heading One</h1>
+                        <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt eius eos molestias aspernatur veritatis
+                            ea nam? Exercitationem ipsum numquam reiciendis!</p>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item carousel-image-2 ">
+                <div class="container">
+                    <div class="carousel-caption d-none d-sm-block  mb-5">
+                        <h1 class="display-3">Heading Two</h1>
+                        <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt eius eos molestias aspernatur veritatis
+                            ea nam? Exercitationem ipsum numquam reiciendis!</p>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item carousel-image-3">
+                <div class="container">
+                    <div class="carousel-caption d-none d-sm-block text-right mb-5">
+                        <h1 class="display-3">Heading Two</h1>
+                        <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt eius eos molestias aspernatur veritatis
+                            ea nam? Exercitationem ipsum numquam reiciendis!</p>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item carousel-image-3">
+                <div class="container">
+                    <div class="carousel-caption d-none d-sm-block text-right mb-5">
+                        <h1 class="display-3">Heading Two</h1>
+                        <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt eius eos molestias aspernatur veritatis
+                            ea nam? Exercitationem ipsum numquam reiciendis!</p>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item carousel-image-3">
+                <div class="container">
+                    <div class="carousel-caption d-none d-sm-block text-right mb-5">
+                        <h1 class="display-3">Heading Two</h1>
+                        <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt eius eos molestias aspernatur veritatis
+                            ea nam? Exercitationem ipsum numquam reiciendis!</p>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <a href="#myCarousel" data-slide="prev" class="carousel-control-prev">
+            <span class="carousel-control-prev-icon"></span>
+        </a>
+        <a href="#myCarousel" data-slide="next" class="carousel-control-next">
+                <span class="carousel-control-next-icon"></span>
+            </a>
+
+
+    </div>
+
+</section> -->

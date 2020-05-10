@@ -1,26 +1,29 @@
 <section id="showcase">
-    <div id="myCarousel" class="carousel slide" data-ride="carousel">
-        <ol class="carousel-indicators">
-            <li *ngFor="let navBar of navBars ; let i = index" data-target="#myCarousel" data-slide-to="i" [class]="i == 0 ? 'active' : ''"></li>
+  <div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <ol class="carousel-indicators">
+      <li *ngFor="let navBar of carouselImgUrl ; let i = index" data-target="#myCarousel" data-slide-to="i"
+        [class]="i == 0 ? 'active' : ''"></li>
 
-        </ol>
-        <div class="carousel-inner">
-            <div *ngFor="let img of carouselImgUrl ; let i = index" [class]="i == 0 ? 'active carousel-item' : 'carousel-item'" [ngStyle]="{'background': 'url(' + img + ')', 'background-size': 'cover'}">
-                <div class="container">
-                    <div class="carousel-caption d-none d-sm-block text-right mb-5">
-                        <h1 class="display-3">Heading One</h1>
-                        <app-todays-thought [index]=i></app-todays-thought>
-                    </div>
-                </div>
-            </div>
+    </ol>
+    <div class="carousel-inner">
+      <div *ngFor="let img of carouselImgUrl ; let i = index"
+        [class]="i == 0 ? 'active carousel-item' : 'carousel-item'"
+        [ngStyle]="{'background': 'url(' + img + ')', 'background-size': 'cover'}">
+        <div class="container">
+          <div class="carousel-caption d-none d-sm-block text-right mb-5">
+            <h1 class="display-5">Thought Of The Day</h1>
+            <app-todays-thought [index]=i></app-todays-thought>
+          </div>
         </div>
-        <a href="#myCarousel" data-slide="prev" class="carousel-control-prev">
-            <span class="carousel-control-prev-icon"></span>
-        </a>
-        <a href="#myCarousel" data-slide="next" class="carousel-control-next">
-            <span class="carousel-control-next-icon"></span>
-        </a>
+      </div>
     </div>
+    <a href="#myCarousel" data-slide="prev" class="carousel-control-prev">
+      <span class="carousel-control-prev-icon"></span>
+    </a>
+    <a href="#myCarousel" data-slide="next" class="carousel-control-next">
+      <span class="carousel-control-next-icon"></span>
+    </a>
+  </div>
 </section>
 
 <!-- 

@@ -1,13 +1,7 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
   <div class="container">
     <a herf="#" class="navbar-brand">
-      <img
-        src="assets/img/logo.jpg"
-        class="logo"
-        width="50"
-        height="50"
-        alt=""
-      />
+      <img src="assets/img/logo.jpg" class="logo" width="50" height="50" alt="" />
       <span class="title">{{navBrand}}</span>
     </a>
     <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
@@ -15,8 +9,8 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarCollapse">
       <ul class="navbar-nav ml-auto">
-        <li *ngFor="let navBar of navBars ; let i= index" [class]="i == 0 ? 'active navbar-item' : 'navbar-item'">
-          <a href="#" class="nav-link">{{navBar}}</a>
+        <li *ngFor="let navBar of navBars ; let i= index" [class]="i == 0 ? ' navbar-item' : 'navbar-item'">
+          <a href="#" class="nav-link" routerLinkActive="active" [routerLink]="[navBar.link]">{{navBar.title}}</a>
         </li>
 
       </ul>

@@ -1,27 +1,3 @@
-<section class="section-event">
-    <div class="wrap-slick2">
-        <div class="slick2">
-            <div class="item-slick2 item1-slick2 event" style="background-image: url(assets/img/bg-event-01.jpg);">
-                <div class="wrap-content-slide2 p-t-115 p-b-208">
-                    <div class="container">
-                        <div class="title-event ext-center m-b-52">
-                            <span class="text-Danger ">
-                                            Upcomming
-                                        </span>
-
-                            <h3 class="tit6 text-center  text-light p-l-15 p-r-15 p-t-3">
-                                Events
-                            </h3>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-
-
 <!-- <section id="showcase">
     <div id="myCarousel" class="carousel slide" data-ride="carousel">
         he
@@ -29,45 +5,148 @@
 
 </section> -->
 
-<!-- <section id="boxes" class="py-5">
-    <div class="container">
+<section id="showcase">
+  <div id="myCarouselEvent" class="carousel slide carousel-fade" data-ride="carousel">
+    <ol class="carousel-indicators">
+      <li data-target="#myCarouselEvent" data-slide-to="0" class="active"></li>
+    </ol>
+    <div class="carousel-inner py-5">
+      <div class="container animated bounce infinite">
+        <h2 class="animate__animated animate__bounce infinite text-center mb-5">Upcoming Events</h2>
         <div class="row">
-            <div class="col-md-3">
-                <div class="card text-center mb-resp">
-                    <div class="card-body">
-                        <h5>Gaytri Jainti</h5>
-                        <h6>21 JUN 2020</h6>
-                        <p class="text-muted">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eveniet, deserunt.</p>
-                    </div>
-                </div>
+          <div class="col-md-3  animate__animated animate__slideInRight"
+            *ngFor="let event of showEvents ; let i= index">
+            <div [class]="i%2 == 0 ? 'card text-center bg-dark text-light mb-resp' : 'card text-center mb-resp'">
+              <div class="card-body">
+                <h5>{{event.name}}</h5>
+                <h6>{{event.date}}</h6>
+                <p class="text-muted">{{event.discription}}</p>
+              </div>
             </div>
-            <div class="col-md-3">
-                <div class="card text-center bg-dark text-white mb-resp">
-                    <div class="card-body">
-                        <h5>Guru Purnima</h5>
-                        <h6>21 JUL 2020</h6>
-                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eveniet, deserunt.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3">
-                <div class="card text-center mb-resp">
-                    <div class="card-body">
-                        <h5>Ganesh Chaturthi</h5>
-                        <h6>21 AUG 2020</h6>
-                        <p class="text-muted">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eveniet, deserunt.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3">
-                <div class="card text-center bg-dark text-white">
-                    <div class="card-body">
-                        <h5>Ram Novmi</h5>
-                        <h6>21 OCT 2020</h6>
-                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eveniet, deserunt.</p>
-                    </div>
-                </div>
-            </div>
+          </div>
         </div>
+      </div>
+      <!-- <div *ngFor="let img of carouselImgUrl ; let i = index" [class]="i == 0 ? 'active carousel-item' : 'carousel-item'" [ngStyle]="{'background': 'url(' + img + ')', 'background-size': 'cover'}">
+        <div class="container">
+          <div class="carousel-caption d-none d-sm-block text-right mb-5">
+            <h1 class="display-5">Thought Of The Day</h1>
+            <app-todays-thought [index]=i></app-todays-thought>
+          </div>
+        </div>
+      </div> -->
     </div>
+    <a href="#myCarouselEvent" data-slide="prev" (click)="onGoToPrevPage()" class="carousel-control-prev">
+      <span class="carousel-control-prev-icon"></span>
+    </a>
+    <a href="#myCarouselEvent" data-slide="next" (click)="onGoToNextPage()" class="carousel-control-next">
+      <span class="carousel-control-next-icon"></span>
+    </a>
+  </div>
+</section>
+
+<!-- 
+//............................. -->
+<!-- <div id="demo" class="carousel slide py-5" data-ride="carousel"> -->
+
+<!-- Indicators -->
+<!-- <ul class="carousel-indicators">
+    <li data-target="#demo" data-slide-to="0" class="active bg-danger" *ngFor="let event of events/4" ;></li>
+    <li data-target="#demo" data-slide-to="1" class="bg-danger"></li>
+    <li data-target="#demo" data-slide-to="2" class="bg-danger"></li>
+  </ul> -->
+
+<!-- The slideshow -->
+<!-- <div class="container carousel-inner no-padding">
+    <div class="carousel-item active">
+      <section id="boxes" class="py-5">
+        <div class="container">
+          <h2 class="text-center mb-5">Upcoming Events</h2>
+          <div class="row">
+            <div class="col-md-3" *ngFor="let event of showEvents ; let i= index">
+              <div [class]="i%2 == 0 ? 'card text-center bg-dark text-light mb-resp' : 'card text-center mb-resp'">
+                <div class="card-body">
+                  <h5>{{event.name}}</h5>
+                  <h6>{{event.date}}</h6>
+                  <p class="text-muted">{{event.discription}}</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+  </div> -->
+
+<!-- Left and right controls -->
+<!-- <a class="carousel-control-prev" href="#demo" (click)="onGoToPrevPage()" data-slide="prev">
+  <span class="carousel-control-prev-icon"></span>
+</a>
+  <a class="carousel-control-next active" href="#demo" (click)="onGoToNextPage()" data-slide="next">
+  <span class="carousel-control-next-icon "></span>
+</a>
+</div> -->
+
+
+<!-- 
+<section id="boxes " class="py-5 ">
+  <div class="container ">
+    <h2 class="text-center mb-5 ">Upcoming Events</h2>
+    <div class="row ">
+      <div class="col-md-3 " *ngFor="let event of events ; let i=i ndex ">
+        <div [class]="i%2==0 ? 'card text-center bg-dark text-light mb-resp' : 'card text-center mb-resp' ">
+          <div class="card-body ">
+            <h5>{{event.name}}</h5>
+            <h6>{{event.date}}</h6>
+            <p class="text-muted ">{{event.discription}}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section> -->
+<!-- 
+
+<section id="boxes " class="py-5 ">
+  <div class="container ">
+    <h2 class="text-center mb-5 ">Upcoming Events</h2>
+    <div class="row ">
+      <div class="col-md-3 " ngFor=> 
+        <div class="card text-center mb-resp ">
+          <div class="card-body ">
+            <h5>Gaytri Jainti</h5>
+            <h6>21 JUN 2020</h6>
+            <p class="text-muted ">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eveniet, deserunt.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3 ">
+        <div class="card text-center bg-dark text-white mb-resp ">
+          <div class="card-body ">
+            <h5>Guru Purnima</h5>
+            <h6>21 JUL 2020</h6>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eveniet, deserunt.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3 ">
+        <div class="card text-center mb-resp ">
+          <div class="card-body ">
+            <h5>Ganesh Chaturthi</h5>
+            <h6>21 AUG 2020</h6>
+            <p class="text-muted ">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eveniet, deserunt.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3 ">
+        <div class="card text-center bg-dark text-white ">
+          <div class="card-body ">
+            <h5>Ram Novmi</h5>
+            <h6>21 OCT 2020</h6>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eveniet, deserunt.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </section> -->

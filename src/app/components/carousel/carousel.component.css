@@ -1,24 +1,28 @@
-.carousel-item{
-    height: 450px;
+.carousel-item {
+  height: 500px;
 }
 
-.carousel-image-1{
-    /* background: url('/assets/img/image1.jpg');
+.carousel-image-1 {
+  /* background: url('/assets/img/image1.jpg');
     background-size: cover */
 }
-.carousel-image-2{
-    /* background: url('/assets/img/image2.jpg');
+
+.carousel-image-2 {
+  /* background: url('/assets/img/image2.jpg');
     background-size: cover */
 }
-.carousel-image-3{
-    /* background: url('/assets/img/image3.jpg');
+
+.carousel-image-3 {
+  /* background: url('/assets/img/image3.jpg');
     background-size: cover */
 }
-.carousel-image-4{
-    /* background: url('/assets/img/gpThree.jpeg');
+
+.carousel-image-4 {
+  /* background: url('/assets/img/gpThree.jpeg');
     background-size: cover */
 }
-.carousel-image-0{
-    /* background: url('/assets/img/gpTwo.jpeg');
+
+.carousel-image-0 {
+  /* background: url('/assets/img/gpTwo.jpeg');
     background-size: cover */
 }

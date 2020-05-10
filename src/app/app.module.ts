@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -26,6 +27,8 @@ import { HomePageComponent } from './components/home-page/home-page.component';
 import { AboutUsComponent } from './components/about-us/about-us.component';
 import { ServicesComponent } from './components/services/services.component';
 import { CarouselComponent } from './components/carousel/carousel.component';
+import { VideoPlayerComponent } from './components/video-player/video-player.component';
+import { CountUpModule } from 'ngx-countup';
 
 @NgModule({
   declarations: [
@@ -53,8 +56,9 @@ import { CarouselComponent } from './components/carousel/carousel.component';
     AboutUsComponent,
     ServicesComponent,
     CarouselComponent,
+    VideoPlayerComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule],
+  imports: [BrowserModule, AppRoutingModule, FormsModule, CountUpModule],
   providers: [],
   bootstrap: [AppComponent],
 })

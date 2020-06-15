@@ -1,0 +1,14 @@
+#page-header {
+  height: 300px;
+  background: url("/assets/img/sun.jpg"), no-repeat;
+  background-size: cover;
+  background-position: 0 -360px;
+  background-attachment: fixed;
+  color: #fff;
+  border-bottom: 1px #eee solid;
+  padding-top: 50px;
+}
+.about-img {
+  margin-top: -50px;
+  height: 80vh;
+}

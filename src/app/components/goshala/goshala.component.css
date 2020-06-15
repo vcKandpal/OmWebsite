@@ -1,0 +1,73 @@
+#home-section {
+  background: url(/assets/img/goshala.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 0 -200px;
+  background-attachment: fixed;
+  min-height: 300px;
+}
+
+#home-section .dark-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  min-height: 350px;
+  background: rgba(0, 0, 0, 0.7);
+}
+
+#home-section .home-inner {
+  padding-top: 150px;
+}
+
+#detail-section {
+  background: url(/assets/img/goshala.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 0 -200px;
+  background-attachment: fixed;
+  min-height: 675px;
+  /* -webkit-filter: grayscale(30%); /* Safari 6.0 - 9.0 */
+  /* filter: grayscale(30%);
+  filter: brightness(30%); */
+}
+
+#detail-section .detail-dark-overlay {
+  position: absolute;
+  /* top: ; */
+  left: 0;
+  width: 100%;
+  min-height: 675px;
+  background: rgba(0, 0, 0, 0.7);
+}
+
+/* //url(/assets/img/goshala.jpg); */
+
+#img-section {
+  background: gray;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 0 -200px;
+  background-attachment: fixed;
+  min-height: 800px;
+  /* -webkit-filter: grayscale(30%); /* Safari 6.0 - 9.0 */
+  /* filter: grayscale(30%);
+  filter: brightness(30%); */
+}
+
+#img-section .img-dark-overlay {
+  position: absolute;
+  /* top: ; */
+  left: 0;
+  width: 100%;
+  min-height: 800px;
+  background: rgba(0, 0, 0, 0.7);
+}
+
+.about-img {
+  /* margin-top: 100px; */
+  height: 80vh;
+}
+/* #home-section .card-form {
+  opacity: 0.8;
+} */

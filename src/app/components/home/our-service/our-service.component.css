@@ -1,0 +1,16 @@
+#authors img {
+  margin-top: -50px;
+}
+
+#authors .card:hover {
+  background: yellow;
+  color: black;
+}
+
+#authors .fab {
+  color: #fff;
+}
+
+.rounded-circle {
+  border-radius: 10% !important;
+}

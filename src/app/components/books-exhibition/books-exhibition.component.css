@@ -1,0 +1,84 @@
+.popular-books {
+  position: relative;
+  overflow-y: hidden; /* Hide vertical scrollbar */
+  overflow-x: hidden;
+  height: 600px;
+}
+
+.video-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  opacity: 0.5;
+}
+
+.bg-video {
+  object-fit: cover;
+}
+.img-header {
+  border-radius: 70%;
+}
+
+/* # Mobile */
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+  .card-img-top {
+    width: 100%;
+    height: 70vw;
+    object-fit: cover;
+  }
+
+  .card-img-mzin {
+    width: 100%;
+    height: 100vw;
+    object-fit: cover;
+  }
+}
+
+/* # Tablet */
+@media only screen and (min-width: 768px) {
+  .card-img-top {
+    width: 60%;
+    height: 30%;
+    object-fit: cover;
+  }
+
+  .card-img-mzin {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+/* # Desktop */
+@media only screen and (min-width: 992px) {
+  .card-img-top {
+    width: 100%;
+    height: 15vw;
+    object-fit: cover;
+  }
+
+  .card-img-mzin {
+    width: 100%;
+    height: 35vw;
+    object-fit: cover;
+  }
+}
+
+/* # Huge */
+@media only screen and (min-width: 1280px) {
+  .card-img-top {
+    width: 100%;
+    height: 15vw;
+    object-fit: cover;
+  }
+
+  .card-img-mzin {
+    width: 100%;
+    height: 35vw;
+    object-fit: cover;
+  }
+}
+/*  */

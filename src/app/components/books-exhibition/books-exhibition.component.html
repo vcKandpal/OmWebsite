@@ -1,0 +1,222 @@
+<header>
+  <section class="popular-books">
+    <div class="video-container">
+      <video class="bg-video" autoplay muted loop>
+        <source src="/assets/video/natureMounten.mp4" type="video/mp4" />
+        Your browser is not supported
+      </video>
+    </div>
+    <div class="container-fluid">
+      <div class="container py-5">
+        <div class="row my-2">
+          <div class="col text-center">
+            <h2 class="display-3 text-white text-dark">
+              <!-- <strong>I Am Not A Person, I Am A Thought.</strong> -->
+            </h2>
+          </div>
+        </div>
+        <div class="row d-lg-block d-none py-5">
+          <!--  -->
+          <blockquote class="blockquote">
+            <h3 class="display-3 text-center text-dark mt-5">
+              <strong>I Am Present In My Literature.</strong>
+            </h3>
+            <footer class="blockquote-footer text-center">
+              <!-- Someone famous in <cite title="Source Title">Source Title</cite> -->
+              <strong>
+                <cite title="Source Title">
+                  Pandit Sriram Sharma Acharya.</cite
+                ></strong
+              >
+            </footer>
+          </blockquote>
+        </div>
+        <div class="row d-lg-block d-none py-3">
+          <div class="col text-center">
+            <button
+              type="button"
+              class="btn btn-outline-warning btn-lg"
+              onclick=" window.open('https://www.awgpstore.com','_blank')"
+            >
+              Our Books
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</header>
+<section>
+  <div class="container">
+    <div class="row py-5">
+      <div class="col-md-6 text-center">
+        <img
+          src="/assets/img/books/test.jpg"
+          alt=""
+          class="img-fluid mb-3 rounded"
+        />
+      </div>
+
+      <div class="col-md-6 text-center">
+        <h2>Why Swadhiyay is Required?</h2>
+        <p class="lead">
+          According to research conducted at the University of Toronto, study
+          participants who read short-story fiction experienced far less need
+          for "cognitive closure" compared with counterparts who read nonfiction
+          essays. Essentially, they tested as more open-minded, compared with
+          the readers of essays. "Although nonfiction reading allows students to
+          learn the subject matter, it may not always help them in thinking
+          about it," the authors write. "A physician may have an encyclopedic
+          knowledge of his or her subject, but this may not prevent the
+          physician from seizing and freezing on a diagnosis, when additional
+          symptoms point to a different malady."
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+<section>
+  <div class="container bg-light">
+    <div class="row">
+      <div class="col text-center">
+        <h1><strong>Our Publication</strong></h1>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-3">
+        <div>
+          <ul style="list-style-type: none; font-size: 15px;">
+            <li *ngFor="let book of booksTitle; let i = index">
+              <div id="accordion">
+                <div class="card bg-light">
+                  <div class="card-header">
+                    <a
+                      href="{{ '#collapse' + i }}"
+                      data-parent="#accordion"
+                      data-toggle="collapse"
+                    >
+                      {{ book.topic }}
+                    </a>
+                  </div>
+
+                  <div id="{{ 'collapse' + i }}" class="collapse">
+                    <div class="card-body">
+                      <ul>
+                        <li
+                          style="font-size: 12px;"
+                          *ngFor="let subtitle of book.subTopic; let i = index"
+                        >
+                          {{ subtitle }}
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-md-9">
+        <div class="row">
+          <!-- <div *ngFor="let bookImg of ourBooks; let i = index"> -->
+          <div
+            *ngFor="let bookImg of ourBooks"
+            class="col-xl-3 col-lg-4 col-sm-8"
+          >
+            <div class="card text-center mb-3 book-card mx-auto">
+              <!-- <div class="card-header">
+                <h4 class="font-weight-light">A Tale of Two Cities</h4>
+              </div> -->
+              <div
+                class="card-body abc"
+                appDoAnimation
+                [animationOnHover]="'animate__animated animate__heartBeat'"
+              >
+                <img
+                  src="{{ bookImg.img }}"
+                  class="img-fluid rounded card-img-top"
+                />
+              </div>
+              <!-- <div class="card-footer">
+                By Charles Dickens
+              </div> -->
+            </div>
+          </div>
+          <!-- </div> -->
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Magzine -->
+<section>
+  <div class="container-fluid">
+    <div class="container py-5">
+      <div class="row my-5">
+        <div class="col text-center bg-warning">
+          <h1 class="display-4 text-dark">Our Magazine</h1>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-4" *ngFor="let magazine of ourMagazines">
+          <div class="card text-center mb-3 book-card mx-auto">
+            <div class="card-header bg-warning">
+              <h4 class="font-weight-light">{{ magazine.name }}</h4>
+            </div>
+            <div class="card-body">
+              <img
+                src="{{ magazine.img }}"
+                class="img-fluid rounded card-img-mzin"
+              />
+            </div>
+            <div class="card-footer bg-warning">
+              {{ magazine.subscription | currency: "INR":true }}/Yearly
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col text-center">
+          <button
+            type="button"
+            class="btn btn-danger btn-lg btn-block"
+            onclick=" window.open('https://www.awgp.org/contact_us/subscription_of_magazines','_blank')"
+          >
+            Magazine Subscription
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="container-fluid">
+  <div class="container py-5">
+    <!-- <div class="row my-5">
+      <div class="col text-center">
+        <h1 class="display-1 text-white">Mai Vaykti Nhi Vichar Hum</h1>
+      </div>
+    </div> -->
+    <div class="row d-lg-block d-none">
+      <div class="col text-center">
+        <img src="assets/img/books/book.png" width="550" />
+      </div>
+    </div>
+  </div>
+</div>
+<section class="bg-dark">
+  <div class="text-center py-4 text-white"><h3>Image Gallery</h3></div>
+  <div class="row">
+    <div class="col-md-2"></div>
+    <div class="col-md-8" style="border-radius: 10%;">
+      <app-image-gallery-page
+        [componentName]="componetName"
+      ></app-image-gallery-page>
+    </div>
+    <div class="col-md-2"></div>
+  </div>
+  <div class="text-center my-4"><h3></h3></div>
+</section>
+
+<app-footer></app-footer>

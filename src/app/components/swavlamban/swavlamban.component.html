@@ -1,1 +1,115 @@
-<p>swavlamban works!</p>
+<app-img-carousel [detailedObject]="detaildObject"></app-img-carousel>
+
+<section class="py-5 px-5">
+  <div class="row mb-4">
+    <div class="col text-center">
+      <h1>
+        <strong>Why Savalban & How is it impecting our Economy?</strong>
+      </h1>
+      <
+    </div>
+  </div>
+  <div class="row" style="height: 320px;">
+    <div class="col-md-6">
+      <img
+        src="/assets/img/goushala/krishanaCow.jpg"
+        alt=""
+        class="img-fluid rounded-circle d-none d-md-block about-img"
+      />
+    </div>
+    <div class="col-md-6 mb-5">
+      <p>
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vero,
+        voluptatibus harum iste vel nihil inventore expedita possimus odit atque
+        provident quaerat ipsam vitae? Repellat vero, qui recusandae quos quod
+        beatae ipsam reprehenderit minima veniam blanditiis quaerat, perferendis
+        amet tempora? Quae, porro magni voluptate ipsa nam aliquam, in iusto
+        corporis consectetur asperiores error maiores consequatur impedit
+        quibusdam pariatur nemo autem sapiente dolorem et nobis quod aperiam
+        similique qui debitis. Nemo, ut. Excepturi at expedita aperiam
+        distinctio iusto perspiciatis inventore! Atque similique placeat beatae
+        commodi esse quo, iusto nesciunt magni velit soluta! beatae ipsam
+        reprehenderit minima veniam blanditiis quaerat, perferendis amet
+        tempora? Quae, porro magni voluptate ipsa nam aliquam, in iusto corporis
+        consectetur asperiores error maiores consequatur impedit quibusdam
+        pariatur nemo autem sapiente dolorem et nobis quod aperiam similique qui
+        debitis. Nemo, ut. Excepturi at expedita aperiam distinctio iusto
+        perspiciatis inventore! Atque similique placeat beatae commodi esse quo,
+        iusto nesciunt magni velit soluta!
+      </p>
+    </div>
+  </div>
+</section>
+
+<section id="create-head-section" class="bg-dark">
+  <div class="container">
+    <div class="row">
+      <div class="col text-center py-5 text-light">
+        <!-- <h1 class="display-4">Create</h1> -->
+        <p class="lead display-4 text-light pt-5">
+          <strong>
+            Our thoughts hold the power to build, bend or break our
+            circumstances.</strong
+          >
+        </p>
+        <small class="blockquote-footer text-right text-light">
+          <cite title="Source Title"> Pandit Sri Ram Sharma Acharya</cite>
+        </small>
+        <!-- <a href="#" class="btn btn-outline-light">Find Out More</a> -->
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="mt-5 py-5">
+  <div class="row">
+    <div class="col pb-5 text-center">
+      <h1>
+        <strong>Our Savalaban Service</strong>
+      </h1>
+    </div>
+  </div>
+  <div class="row justify-content-around">
+    <div class="col-md-4 py-3" *ngFor="let savabhan of savabhanServices">
+      <div class="card-header mb-1 bg-warning">
+        <h4 class="card-title text-center">{{ savabhan.title }}</h4>
+      </div>
+      <div class="card mb-2">
+        <img
+          class="card-img-top"
+          [src]="savabhan.img"
+          alt=""
+          style="border-radius: 2%; height: 250px;"
+        />
+      </div>
+      <div class="card p-3 bg-warning">
+        <blockquote class="card-bodyquote">
+          <p>
+            {{ savabhan.discription }}
+          </p>
+          <footer class="blockquote-footer text-right">
+            <small>
+              <cite title="Source Title"> {{ savabhan.author }}</cite>
+            </small>
+          </footer>
+        </blockquote>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="bg-dark">
+  <div class="text-center py-4 text-white"><h3>Image Gallery</h3></div>
+  <div class="row">
+    <div class="col-md-2"></div>
+    <div class="col-md-8" style="border-radius: 10%;">
+      <app-image-gallery-page
+        [componentName]="componetName"
+      ></app-image-gallery-page>
+    </div>
+    <div class="col-md-2"></div>
+  </div>
+  <div class="text-center my-4"><h3></h3></div>
+</section>
+
+<app-footer></app-footer>

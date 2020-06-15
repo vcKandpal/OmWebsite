@@ -1,0 +1,56 @@
+<section id="authors" class="my-5 text-center">
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <div class="info-header mb-5">
+          <h1 class="text-dark pb-3">
+            {{ title }}
+          </h1>
+          <p class="lead">{{ serviceContents }}</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="d-flex justify-content-around row">
+      <div class="col-lg-4 col-md-6 mb-5" *ngFor="let service of services">
+        <a [routerLink]="service.link">
+          <div
+            class="card"
+            appDoAnimation
+            [animationOnHover]="'animate__animated animate__pulse'"
+          >
+            <div class="card-body text-dark">
+              <img
+                [src]="service.img"
+                alt=""
+                class="img-fluid rounded-circle w-50 mb-3"
+              />
+              <h3>{{ service.title }}</h3>
+              <!-- <h5 class="text-muted">Lead Writer</h5> -->
+              <p>
+                {{ service.discription }}
+              </p>
+              <div class="d-flex justify-content-center">
+                <div class="p-4">
+                  <a href="http://facebook.com">
+                    <!-- <fa-icon [icon]="['fab', 'twitter']"></fa-icon> -->
+                  </a>
+                </div>
+                <div class="p-4">
+                  <a href="http://twitter.com">
+                    <i class="fab fa-twitter"></i>
+                  </a>
+                </div>
+                <div class="p-4">
+                  <a href="http://instagram.com">
+                    <i class="fab fa-instagram"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>

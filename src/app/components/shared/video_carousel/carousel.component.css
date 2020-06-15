@@ -1,0 +1,41 @@
+/* .carousel-item {
+  height: 100vh;
+} */
+/* body {
+  overflow-y: hidden; 
+  overflow-x: hidden;
+} */
+body {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.popular-books {
+  position: relative;
+  overflow-y: hidden; /* Hide vertical scrollbar */
+  overflow-x: hidden;
+  height: 720px;
+}
+
+.video-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  /* opacity: 0.5; */
+  overflow-y: hidden; /* Hide vertical scrollbar */
+  overflow-x: hidden;
+}
+
+.bg-video {
+  object-fit: cover;
+  height: 90%;
+  width: 100%;
+}
+/* .img-header {
+  border-radius: 70%;
+} */
